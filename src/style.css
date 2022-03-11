@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+  background: #303030;
+  color: white;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 800;
+}
+
+button {
+  font-family: inherit;
+}
+
+.menu-item {
+  padding: 1ch 1.5ch;
+  text-decoration: none;
+  font-weight: 200;
+  width: 100%;
+  transition: background-color 150ms ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: rgb(154, 154, 154);
+}
+
+.drop-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border: 1px solid #303030;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.drop-btn:hover,
+.drop-btn:focus {
+  background-color: #2980b9;
+}
+
+.dropdown {
+  position: relative;
+  width: 200px;
+  /* display: block; */
+}
+
+.dropdown-content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s cubic-bezier(0.72, 0.08, 0.66, 1);
+}
+
+.slider {
+  height: 200px;
+  width: 60vw;
+  display: flex;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  position: relative;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+img {
+  max-height: 200px;
+  width: auto;
+  /* flex: 1 0 auto; */
+  /* position: absolute; */
+}
+
+.image-container-1 {
+  position: absolute;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.arrow {
+  padding: 2ch;
+  background: rgba(221, 221, 221, 0.3);
+  text-shadow: 0px 1px 5px #303030;
+  width: 25px;
+  height: 165px;
+  display: grid;
+  place-items: center;
+  transition: background 300ms ease-out;
+}
+
+.arrow-container {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+  position: relative;
+  bottom: 200px;
+}
+
+.arrow:active {
+  background: rgba(221, 221, 221, 0.7);
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-container {
+  position: relative;
+  bottom: 190px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border: 2px solid #bbb;
+  /* background-color: #bbb; */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-filled {
+  background-color: #bbb;
+}
